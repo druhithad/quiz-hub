@@ -4,6 +4,10 @@ function Timer({ duration }) {
   const [time, setTime] = useState(duration);
 
   useEffect(() => {
+    setTime(duration); // reset when question changes
+  }, [duration]);
+
+  useEffect(() => {
     if (time <= 0) return;
 
     const interval = setInterval(() => {
@@ -13,7 +17,7 @@ function Timer({ duration }) {
     return () => clearInterval(interval);
   }, [time]);
 
-  return <h3>Time Left: {time}s</h3>;
+  return <h3>⏳ Time Left: {time}s</h3>;
 }
 
 export default Timer;

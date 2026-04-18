@@ -1,7 +1,7 @@
 function ScoreCard({ score }) {
   return (
     <div className="card">
-      <h2>Your Score: {score}</h2>
+      <h2>Score: {score}</h2>
     </div>
   );
 }
