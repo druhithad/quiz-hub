@@ -1,0 +1,17 @@
+.navbar {
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  margin: 10px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
