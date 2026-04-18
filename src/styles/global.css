@@ -1,11 +1,39 @@
 body {
-  font-family: Arial;
   margin: 0;
-  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff10;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
   padding: 10px;
-  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7b00;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
+}
+
+button:hover {
+  background: #ff9500;
+}
+
+.card {
+  padding: 15px;
+  background: #ffffff20;
+  border-radius: 10px;
+  margin: 10px 0;
 }

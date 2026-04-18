@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import { db } from "../services/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { ref, get } from "firebase/database";
 
 function Leaderboard() {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
     const fetchScores = async () => {
-      const snapshot = await getDocs(collection(db, "scores"));
-      const data = snapshot.docs.map(doc => doc.data());
-      setScores(data);
+      const snapshot = await get(ref(db, "scores"));
+      if (snapshot.exists()) {
+        const data = Object.values(snapshot.val());
+        setScores(data);
+      }
     };
     fetchScores();
   }, []);
@@ -18,7 +20,7 @@ function Leaderboard() {
     <div>
       <h2>Leaderboard 🏆</h2>
       {scores.map((s, i) => (
-        <p key={i}>{s.name} - {s.score}</p>
+        <p key={i}>{s.score}</p>
       ))}
     </div>
   );

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
@@ -9,16 +9,14 @@ import Leaderboard from "../pages/Leaderboard";
 
 const AppRoutes = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/quiz" element={<QuizPage />} />
-        <Route path="/result" element={<Result />} />
-        <Route path="/leaderboard" element={<Leaderboard />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/quiz" element={<QuizPage />} />
+      <Route path="/result" element={<Result />} />
+      <Route path="/leaderboard" element={<Leaderboard />} />
+    </Routes>
   );
 };
 
