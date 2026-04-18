@@ -1,0 +1,1 @@
+export const QUIZ_TIME = 30;

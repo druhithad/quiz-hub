@@ -1,0 +1,1 @@
+export const SCORE_PER_QUESTION = 10;
